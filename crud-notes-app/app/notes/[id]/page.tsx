@@ -13,7 +13,7 @@ async function getNote(nodeId: string) {
     return data;
 }
 
-export default async function NotePage({ params }: any) {
+export default async function NotePage({ params }: { params: { id: string } }) {
 
     const note = await getNote(params.id);
     
